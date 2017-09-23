@@ -1,11 +1,11 @@
 <div id="comments" class="cf">
-    #if(article.allow_comment)
+    #if(article.allowComment)
     <span class="comment-num">
         ${comments_num('暂无评论', ' 已有 %d 条评论 ')}
         #set( comments = comments(50) )
         #if(!is_empty(comments))
         <ol class="comment-list">
-        #for(comment : comments.list)
+        #for(comment : comments.rows)
         <li data-no-instant="" id="li-comment-${comment.coid}" class="comment-body comment-parent comment-odd">
             <div id="comment-${comment.coid}">
                 <img class="avatar" src="${gravatar(comment.mail)}?s=80&amp;r=G&amp;d=" alt="${comment.author}" width="80" height="80">
