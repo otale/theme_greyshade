@@ -57,7 +57,7 @@
                 <input type="email" name="mail" id="mail" class="form-control" placeholder="电子邮箱 *" required value="">
                 <input type="url" name="url" id="url" class="form-control" placeholder="网址(http://)" value="">
             </div>
-            <textarea name="text" id="textarea" class="form-control" onkeydown="if(event.ctrlKey&amp;&amp;event.keyCode==13){document.getElementById('misubmit').click();return false};" placeholder="在这里输入你的评论..." required=""></textarea>
+            <textarea name="content" id="textarea" class="form-control" onkeydown="if(event.ctrlKey&amp;&amp;event.keyCode==13){document.getElementById('misubmit').click();return false};" placeholder="在这里输入你的评论..." required=""></textarea>
             <button type="submit" class="submit" id="misubmit">提交评论</button>
             <input type="hidden" name="coid" id="coid"/>
             <input type="hidden" name="cid" id="cid" value="${article.cid}"/>
