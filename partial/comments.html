@@ -61,7 +61,7 @@
             <button type="submit" class="submit" id="misubmit">提交评论</button>
             <input type="hidden" name="coid" id="coid"/>
             <input type="hidden" name="cid" id="cid" value="${article.cid}"/>
-            <input type="hidden" name="_csrf_token" value="${_csrf_token}"/>
+            <input type="hidden" name="csrf_token" value="${_csrf_token}"/>
         </form>
     </div>
     #else
