@@ -8,7 +8,7 @@
         #for(comment : comments.rows)
         <li data-no-instant="" id="li-comment-${comment.coid}" class="comment-body comment-parent comment-odd">
             <div id="comment-${comment.coid}">
-                <img class="avatar" src="${gravatar(comment.mail)}?s=80&amp;r=G&amp;d=" alt="${comment.author}" width="80" height="80">
+                <img class="avatar" src="${gravatar(comment.mail)}?s=80&r=G&d=" alt="${comment.author}" width="80" height="80">
                 <div class="comment-main">
                     <p class="comment-at"></p>
                     ${article(comment.content)}
@@ -25,7 +25,7 @@
                     #for(child : comment.children)
                     <li data-no-instant="" id="li-comment-${child.coid}" class="comment-body comment-child comment-level-odd comment-odd comment-by-author">
                         <div id="comment-${child.coid}">
-                            <img class="avatar" src="${gravatar(child.mail)}?s=80&amp;r=G&amp;d=" alt="${child.author}" width="80" height="80">
+                            <img class="avatar" src="${gravatar(child.mail)}?s=80&r=G&d=" alt="${child.author}" width="80" height="80">
                             <div class="comment-main">
                                 <p class="comment-at">${comment_at(child.parent)}</p>
                                 ${article(child.content)}
@@ -61,7 +61,7 @@
             <button type="submit" class="submit" id="misubmit">提交评论</button>
             <input type="hidden" name="coid" id="coid"/>
             <input type="hidden" name="cid" id="cid" value="${article.cid}"/>
-            <input type="hidden" name="csrf_token" value="${_csrf_token}"/>
+            <input type="hidden" name="csrf_token" value="${csrf_token}"/>
         </form>
     </div>
     #else
